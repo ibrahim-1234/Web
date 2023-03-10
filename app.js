@@ -2,7 +2,7 @@ import express from 'express'
 const router = express.Router()
 
 const app = express()
-const PORT = 80
+const PORT = process.env.PORT || 3000
 
 app.use(express.static('views'))
 
