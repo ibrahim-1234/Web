@@ -1,22 +1,24 @@
 {
   "type": "module",
-  "name": "web",
+  "name": "find_country_population",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "lite-server --baseDir=\"views\""
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.0-alpha1",
+    "ejs": "^3.1.9",
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "nodemon": "^2.0.21"
   }
 }
