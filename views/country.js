@@ -23,10 +23,11 @@ function find(e){
     list.style.display = 'none'
     for(let c of arr){
         if(c.name.common.toLowerCase() == in_s.value.toLowerCase() && (e.type == 'click' || e.key == 'Enter')){
+            let nf = Intl.NumberFormat()
             document.querySelector('.info').innerHTML = `
             <h3>${c.name.common}</h3><br>
             <img src=${c.flags.svg}><br>
-            population: ${c.population}`
+            Population: ${nf.format(c.population)}`
         }
     }
 }
