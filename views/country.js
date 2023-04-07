@@ -2,13 +2,25 @@ const in_s = document.querySelector(".in_s");
 const list = document.querySelector(".list");
 let arr = new Array();
 
-fetch("https://restcountries.com/v3.1/all")
+function GetData(){
+  fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
   .then((country) => {
     for (const c of country) {
       arr.push(c);
     }
+  }).catch(err =>{
+    console.log(`Error happpend to the fetching of the data! ${err}`);
   });
+}
+
+GetData()
+
+//for keeping the data up to date.
+setInterval(() => {
+  arr = new Array()
+  GetData()
+}, 5000)
 
 //clear input
 document.querySelector("svg").addEventListener("click", (e) => {
