@@ -2,16 +2,16 @@ const in_s = document.querySelector(".in_s");
 const list = document.querySelector(".list");
 let arr = new Array();
 
-function GetData(){
+function GetData() {
   fetch("https://restcountries.com/v3.1/all")
-  .then((res) => res.json())
-  .then((country) => {
-    for (const c of country) {
-      arr.push(c);
-    }
-  }).catch(err =>{
-    console.log(`Error happpend to the fetching of the data! ${err}`);
-  });
+    .then((res) => res.json())
+    .then((country) => {
+      for (const c of country) {
+        arr.push(c);
+      }
+    }).catch(err => {
+      console.log(`Error happpend to the fetching of the data! ${err}`);
+    });
 }
 
 GetData()
