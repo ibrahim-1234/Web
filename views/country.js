@@ -20,7 +20,7 @@ GetData()
 setInterval(() => {
   arr = new Array()
   GetData()
-}, 5000)
+}, 60000)
 
 //clear input
 document.querySelector("svg").addEventListener("click", (e) => {
