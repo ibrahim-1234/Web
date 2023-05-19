@@ -42,6 +42,10 @@ function find(e) {
             <h3>${c.name.common}</h3><br>
             <img src=${c.flags.svg}><br>
             Population: ${nf.format(c.population)}`;
+            in_s.value = ''
+            document.querySelector("svg").style.display = "none";
+            in_s.blur()
+            break
     }
   }
 }
