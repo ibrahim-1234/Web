@@ -153,7 +153,3 @@ input[type="search"]::-webkit-search-results-decoration {
 .list::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-.text {
-  text-align: center;
-}
