@@ -50,7 +50,7 @@ function find(e) {
   }
 }
 
-function fliter_result(text) {
+function filter_result(text) {
   let res = arr.filter((e) => {
     if (e.name.common.toLowerCase().includes(text.toLowerCase())) return e;
   });
@@ -69,7 +69,7 @@ function select_item(e) {
 in_s.addEventListener("input", () => {
   let svg = document.querySelector("svg");
   list.innerHTML = "";
-  let filtered = fliter_result(in_s.value);
+  let filtered = filter_result(in_s.value);
   res = "";
   if (filtered.length == 0 || in_s.value == "") {
     list.style.display = "none";
