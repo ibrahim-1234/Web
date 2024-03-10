@@ -7,6 +7,7 @@ function GetData() {
     .then((res) => res.json())
     .then((country) => {
       for (const c of country) {
+        if(c.name.common.toLowerCase() != 'israel')
         arr.push(c);
       }
     }).catch(err => {
@@ -44,7 +45,7 @@ function find(e) {
             Population: ${nf.format(c.population)}`;
             in_s.value = ''
             document.querySelector("svg").style.display = "none";
-            in_s.blur()
+            in_s.focus()
             break
     }
   }
@@ -61,7 +62,6 @@ function select_item(e) {
   if (e.type == "click" || e.key == "Enter") {
     in_s.value = e.currentTarget.querySelector(".name").innerHTML;
     list.style.display = "none";
-    in_s.focus();
     find(e);
   }
 }
