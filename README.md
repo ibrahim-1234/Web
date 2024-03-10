@@ -6,6 +6,11 @@
 ## installation:
 ```
 git clone https://github.com/ibrahim-1234/find-country-population.git
+```
+```
 cd /path/to/find-country-population/
+```
+```
 npm start
 ```
+
